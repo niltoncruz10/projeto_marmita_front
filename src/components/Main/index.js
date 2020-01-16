@@ -4,11 +4,11 @@ import { Container } from 'reactstrap'
 import Home from '../Home'
 import Clientes from '../Clientes'
 
-function Main() {
+function Main(props) {
   return (    
     <main>
       <Container>
-        <Clientes />
+        {props}
       </Container>
     </main>
   )

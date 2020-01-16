@@ -1,11 +1,14 @@
 import React from 'react'
-import { Row, Col, Card } from 'reactstrap'
+import { Row, Col, Card, Container } from 'reactstrap'
 
 import User from '../User'
+import Main from '../Main'
+
+import './style.css'
 
 function Home() {
   return (
-    <div>
+    <Container>
       <Row>
         <Col></Col>
         <Col>
@@ -18,7 +21,7 @@ function Home() {
         </Col>
         <Col md={8}>
           <Card>
-            <div>
+            <div className="cardapio-home">
               <p><b>Lorem</b></p>
               <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
               <br/>
@@ -31,7 +34,8 @@ function Home() {
           <Experience /> */}
         </Col>
       </Row>
-    </div>
+    </Container>
+
   )
 }
 

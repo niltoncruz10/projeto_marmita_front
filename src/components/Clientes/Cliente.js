@@ -1,11 +1,15 @@
 import React from 'react'
 
-function Cliente() {
+
+
+function Cliente(props) {
   return (
-    <div>
-      Nome: "Fulano" <br/>
-      Local: Taguatinga
-    </div>
+    <tr>
+      <td>{props.cliente.id}</td>
+      <td>{props.cliente.nome}</td>
+      <td>{props.cliente.email}  </td>
+      <td>Editar | Excluir</td>
+    </tr>
   )
 }
 
