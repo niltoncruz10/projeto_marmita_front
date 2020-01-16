@@ -1,12 +1,15 @@
 import React from 'react'
 
 import Cliente from './Cliente'
-import { Table, Container } from 'reactstrap'
+import { Table, Container, Button } from 'reactstrap'
+
+import './style.css'
 
 function Clientes() {
   return (
     <Container>
-      <Table>
+      <Button color="primary">Cadastrar cliente</Button>{' '}
+      <Table striped bordered className="table-cliente">
         <thead>
           <tr>
             <th>#</th>
