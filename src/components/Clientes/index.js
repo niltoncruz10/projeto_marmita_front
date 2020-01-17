@@ -3,12 +3,13 @@ import React from 'react'
 import Cliente from './Cliente'
 import { Table, Container, Button } from 'reactstrap'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css'
 
 function Clientes() {
   return (
     <Container>
-      <Button color="primary">Cadastrar cliente</Button>{' '}
+      <a href="/clientes/new" className="btn btn-primary">Cadastrar cliente</a>
       <Table striped bordered className="table-cliente">
         <thead>
           <tr>
