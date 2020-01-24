@@ -30,7 +30,7 @@ class Clientes extends Component {
     const clientes = this.state.clientes.map(
       pessoa => <Cliente key={pessoa.id} cliente={pessoa} />
     )
-
+        
     return (
       <Container>
         <a href="/clientes/new" className="btn btn-primary">Cadastrar cliente</a>
