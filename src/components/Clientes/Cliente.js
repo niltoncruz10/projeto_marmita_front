@@ -3,12 +3,13 @@ import React from 'react'
 
 
 function Cliente(props) {
-  const link = '/cliente/' + props.cliente.login
+  const link = '/cliente/' + props.cliente.id
   return (
     <tr>
       <td><a href={link}>{props.cliente.id}</a></td>
-      <td><a href={link}>{props.cliente.login}</a></td>
-      <td>{props.cliente.url}  </td>
+      <td><a href={link}>{props.cliente.nome}</a></td>
+      <td>Dia {props.cliente.data_pagamento}  </td>
+      <td>R$ {props.cliente.saldo}</td>
       <td>Editar | Excluir</td>
     </tr>
   )

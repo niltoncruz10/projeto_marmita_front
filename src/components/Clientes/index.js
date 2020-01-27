@@ -17,7 +17,7 @@ class Clientes extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://api.github.com/users').then(
+    axios.get('/clientes').then(
       response => {
         this.setState({clientes: response.data})
       }
@@ -39,7 +39,8 @@ class Clientes extends Component {
             <tr>
               <th>#</th>
               <th>Nome</th>
-              <th>Email</th>
+              <th>Data de pagamento</th>
+              <th>Saldo</th>
               <th>Ações</th>
 
             </tr>

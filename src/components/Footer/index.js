@@ -5,7 +5,7 @@ import './style.css'
 function Footer() {
   return (
     <footer>
-      Versão 0.2.1
+      Versão 0.2.2
     </footer>
   )
 }
