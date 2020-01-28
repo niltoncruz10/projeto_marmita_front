@@ -12,14 +12,16 @@ class Clientes extends Component {
   constructor() {
     super()
     this.state = {
+      loading: false,
       clientes: []
     }
   }
 
   componentDidMount() {
+    this.setState({loading: true})
     axios.get('/clientes').then(
       response => {
-        this.setState({clientes: response.data})
+        this.setState({clientes: response.data, loading: false})
       }
       
     )
@@ -46,7 +48,7 @@ class Clientes extends Component {
             </tr>
           </thead>
           <tbody>
-            {clientes}
+            {this.state.loading ? <tr><td colSpan="5" className="carregando">Carregando...</td></tr> : clientes}
           </tbody>
         </Table>
       </Container>

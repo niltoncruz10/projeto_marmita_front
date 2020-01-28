@@ -89,9 +89,7 @@ class FormCliente extends Component {
               <option value="26">26</option>
               <option value="27">27</option>
               <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
+
             </select>
           </FormGroup>
 
@@ -101,7 +99,7 @@ class FormCliente extends Component {
           </FormGroup>
 
           <FormGroup className="botoes">
-            <a href="/clientes" className="btn btn-secondary">Cancelar</a>
+            <a href="/clientes" className="btn btn-secondary">Voltar</a>
             <Button color="primary">Salvar</Button>
           </FormGroup>
         </Form>
