@@ -11,7 +11,7 @@ class FormCliente extends Component {
     this.state = {
       nome: '',
       data_pagamento: '1',
-      saldo: '',
+      saldo: '0',
     }
 
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -95,7 +95,7 @@ class FormCliente extends Component {
 
           <FormGroup>
             <Label for="saldo">Saldo (R$)</Label>
-            <Input type="text" name="saldo" onChange={this.handleChange} />
+            <Input type="text" name="saldo" onChange={this.handleChange} value={this.state.saldo} />
           </FormGroup>
 
           <FormGroup className="botoes">

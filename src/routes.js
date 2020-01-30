@@ -6,6 +6,7 @@ import Clientes from './components/Clientes'
 import FormCliente from './components/Clientes/FormCliente'
 import ShowCliente from './components/Clientes/ShowCliente'
 import FormAlterarCliente from './components/Clientes/FormAlterarCliente'
+import Login from './components/Login'
 
 
 const Routes = () => (
@@ -16,6 +17,7 @@ const Routes = () => (
       <Route path="/clientes/new" component={FormCliente} />
       <Route path="/cliente/:login" component={ShowCliente} />
       <Route path="/clientes/edit/:id" component={FormAlterarCliente} />
+      <Route path="/login" component={Login} />
     </Switch>
   </BrowserRouter>
 )

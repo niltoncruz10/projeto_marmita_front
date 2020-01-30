@@ -13,8 +13,8 @@ const Header = () => {
           <NavItem>
             <NavLink href="/clientes">Clientes</NavLink>
           </NavItem>
-          <NavItem>
-            <NavLink href="/pedidos">Pedidos</NavLink>          
+          <NavItem className="">
+            <NavLink href="/login" className="">Sair</NavLink>          
           </NavItem>
         </Nav>
       </Navbar>    
