@@ -20,7 +20,7 @@ Para que o sistema funcione corretamente, você primeiro deve executar o back-en
 
 Após certificar-se que o sistema em python está rodando, execute o front-end.
 
-#### *os comandos para execução do front-end estão descritos logo acima!
+#### *os comandos para execução da aplicação no front-end estão descritos logo acima!
 
 ## Comando do git para a atualização de versão
 

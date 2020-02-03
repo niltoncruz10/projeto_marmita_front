@@ -13,6 +13,21 @@ const Header = () => {
           <NavItem>
             <NavLink href="/clientes">Clientes</NavLink>
           </NavItem>
+          <NavItem>
+            <NavLink href="/cardapios">Cardápios</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/contas-receber">Contas a Receber</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/pedidos">Pedidos</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/produtos">Produtos</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/entregas">Entregas</NavLink>
+          </NavItem>
           <NavItem className="">
             <NavLink href="/login" className="">Sair</NavLink>          
           </NavItem>
