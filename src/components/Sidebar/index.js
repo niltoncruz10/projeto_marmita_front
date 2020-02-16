@@ -17,7 +17,7 @@ const SideBar = props => (
           {/* <Submenu title="Home" items={submenus[0]}/> */}
           <NavItem>
             <NavLink href="/">
-              {/* <FontAwesomeIcon icon={faBriefcase} className="mr-2"/>About */}Home
+              {/* <FontAwesomeIcon icon={faBriefcase} className="mr-2"/>About */}Página Inicial
             </NavLink>
           </NavItem>
           <NavItem>
@@ -33,6 +33,11 @@ const SideBar = props => (
           <NavItem>
             <NavLink href="#" to={'/contact'}>
               {/* <FontAwesomeIcon icon={faPaperPlane} className="mr-2"/>Contact */}Contact
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/login">
+              {/* <FontAwesomeIcon icon={faPaperPlane} className="mr-2"/>Contact */}Sair
             </NavLink>
           </NavItem>
         </Nav>        

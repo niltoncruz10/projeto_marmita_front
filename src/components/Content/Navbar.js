@@ -13,8 +13,10 @@ export default props => {
     <Navbar color="light" light className="navbar shadow-sm p-3 mb-5 bg-white rounded" expand="md">      
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
+        <h5>Clientes</h5>       
+
         <Nav className="ml-auto" navbar>
-          <NavItem>
+          {/* <NavItem>
             <NavLink tag={Link} to={'/page-1'}>page 1</NavLink>
           </NavItem>
           <NavItem>
@@ -22,10 +24,10 @@ export default props => {
           </NavItem>
           <NavItem>
             <NavLink tag={Link} to={'/page-3'}>page 3</NavLink>
-          </NavItem>
-          <NavItem>
+          </NavItem> */}
+          {/* <NavItem>
             <NavLink href="/login">Sair</NavLink>
-          </NavItem>
+          </NavItem> */}
       </Nav>
       </Collapse>
     </Navbar>
