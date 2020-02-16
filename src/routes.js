@@ -11,7 +11,7 @@ import Login from './components/Login'
 
 
 const Routes = () => (
-  <BrowserRouter>
+  // <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/clientes" component={Clientes} />
@@ -21,7 +21,7 @@ const Routes = () => (
       <Route path="/cardapios" component={Cardapios} />
       <Route path="/login" component={Login} />
     </Switch>
-  </BrowserRouter>
+  // </BrowserRouter>
 )
 
 export default Routes

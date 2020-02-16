@@ -11,6 +11,7 @@ class FormCliente extends Component {
     this.state = {
       nome: '',
       data_pagamento: '1',
+      descricao: '',
       saldo: '0',
     }
 
@@ -27,19 +28,20 @@ class FormCliente extends Component {
     // console.log(this.state.nome);
     // console.log(this.state.data_pagamento)
 
-    const {nome, data_pagamento, saldo} = this.state
+    const {nome, data_pagamento, descricao, saldo} = this.state
 
     
     const novoCliente = {
       nome,
       data_pagamento,
+      descricao,
       saldo
     }
     
     axios.post(`/clientes/`, novoCliente ).then(
       response => {
         console.log('Cliente adicionado com sucesso! -> ', novoCliente.nome);        
-        this.setState({nome: '', data_pagamento: '', saldo: ''})       
+        this.setState({nome: '', data_pagamento: '', descricao: '', saldo: ''})       
         
       }
     )
@@ -57,6 +59,11 @@ class FormCliente extends Component {
             <Label for="nome">Nome: </Label>
             <Input type="text" name="nome" id="nome" placeholder="Nome do cliente" onChange={this.handleChange} />
           </FormGroup>   
+
+          <FormGroup>
+            <Label for="descricao">Descrição: </Label>
+            <Input type="text" name="descricao" id="descricao" placeholder="Descrição" onChange={this.handleChange} />
+          </FormGroup>
 
           <FormGroup>
             <Label for="data_pagamento">Data de Pagamento</Label>

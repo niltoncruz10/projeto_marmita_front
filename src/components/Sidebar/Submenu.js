@@ -1,38 +1,36 @@
-import React, {useState} from 'react'
-import { NavItem, NavLink, Collapse } from 'reactstrap'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import  { Collapse, NavItem, NavLink } from 'reactstrap';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classNames from 'classnames';
+// import { Link } from 'react-router-dom';
 
-function Submenu(props) {
-
+const Submenu = props => {
+  
   const [collapsed, setCollapsed] = useState(true)
+  const toggleNavbar = () => setCollapsed(!collapsed)
+  const { icon, title, items } = props;
 
+  // console.log('items', items);
+  
+ 
   return (
     <div>
-      {/* <NavItem className={'menu-open'}>
-        <NavLink className="dropdwn-toggle">
-          props.title
+      <NavItem onClick={toggleNavbar} className={classNames({'menu-open': !collapsed})}>
+        <NavLink className="dropdown-toggle">
+          {/* <FontAwesomeIcon icon={icon} className="mr-2"/>{title} */}{title}
         </NavLink>
       </NavItem>
-      <Collapse isOpen={!collapsed} navbar className={'items-menu mb-1'}>
-          <NavItem key="1" className="pl-4">
-            <NavLink tag='{Link}' to="/">
-              Exemplo link
-            </NavLink>
-          </NavItem>
-      </Collapse> */}
-
-      <NavItem>
-        <NavLink className="dropdown-toggle">Link</NavLink>
-      </NavItem>
-      <Collapse isOpen={!collapsed} navbar className={'items-menu mb-1'}>
-        <NavItem>
-          <NavLink>
-            Link nav
-          </NavLink>
-        </NavItem>        
+      <Collapse isOpen={!collapsed} navbar className={classNames('items-menu',{'mb-1': !collapsed})}>
+        {items.map((item, index) => (
+            <NavItem key={index} className="pl-4">
+              <NavLink href="#" to={item.target}>
+                {item.title}
+              </NavLink>
+            </NavItem>
+            ))}
       </Collapse>
     </div>
-  )
+  );
 }
 
-export default Submenu
+export default Submenu;
