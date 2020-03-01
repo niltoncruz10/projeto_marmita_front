@@ -6,9 +6,11 @@ import { Switch, Route } from 'react-router-dom'
 
 import Home from '../Home'
 import Routes from '../../routes'
+import Header from '../Header';
 
 export default props => (
     <Container fluid className={classNames('content', {'is-open': props.isOpen})}>
+      <Header />
       <NavBar toggle={props.toggle}/>
       {/* <Switch> */}
         {/* <Route exact path="/" component={Home} />
