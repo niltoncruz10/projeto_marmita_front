@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-import { Container, Form, FormGroup, Label, Input, Button } from 'reactstrap'
+// import { Container, Form, FormGroup, Label, Input, Button } from 'reactstrap'
 
 import './style.css'
 
@@ -45,28 +45,26 @@ class FormCliente extends Component {
         
       }
     )
-    
-    // event.preventDefault()
 
   }
 
   render() {
     return (    
-      <Container>
+      <div className="container">
         <h1>Cadastrar novo cliente</h1>    
-        <Form onSubmit={this.handleSubmit}>
-          <FormGroup>
-            <Label for="nome">Nome: </Label>
-            <Input type="text" name="nome" id="nome" placeholder="Nome do cliente" onChange={this.handleChange} />
-          </FormGroup>   
+        <form onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" placeholder="Nome do cliente" onChange={this.handleChange} />
+          </div>   
 
-          <FormGroup>
-            <Label for="descricao">Descrição: </Label>
-            <Input type="text" name="descricao" id="descricao" placeholder="Descrição" onChange={this.handleChange} />
-          </FormGroup>
+          <div className="form-group">
+            <label htmlFor="descricao">Descrição: </label>
+            <input type="text" name="descricao" id="descricao" placeholder="Descrição" onChange={this.handleChange} />
+          </div>
 
-          <FormGroup>
-            <Label for="data_pagamento">Data de Pagamento</Label>
+          <div className="form-group">
+            <label htmlFor="data_pagamento">Data de Pagamento</label>
             <select name="data_pagamento" onChange={this.handleChange}>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -98,19 +96,19 @@ class FormCliente extends Component {
               <option value="28">28</option>
 
             </select>
-          </FormGroup>
+          </div>
 
-          <FormGroup>
-            <Label for="saldo">Saldo (R$)</Label>
-            <Input type="text" name="saldo" onChange={this.handleChange} value={this.state.saldo} />
-          </FormGroup>
+          <div className="form-group">
+            <label htmlFor="saldo">Saldo (R$)</label>
+            <input type="text" name="saldo" onChange={this.handleChange} value={this.state.saldo} />
+          </div>
 
-          <FormGroup className="botoes">
+          <div className="botoes">
             <a href="/clientes" className="btn btn-secondary">Voltar</a>
-            <Button color="primary">Salvar</Button>
-          </FormGroup>
-        </Form>
-      </Container>
+            <button color="primary">Salvar</button>
+          </div>
+        </form>
+      </div>
     )
 
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Table, Container } from 'reactstrap'
+// import { Table, Container } from 'reactstrap'
 import axios from 'axios'
 
 import Cliente from './Cliente'
@@ -34,9 +34,9 @@ class Clientes extends Component {
     )
         
     return (
-      <Container>
+      <div className="container">
         <a href="/clientes/new" className="btn btn-primary">Cadastrar cliente</a>
-        <Table striped bordered className="table-cliente">
+        <table striped bordered className="table-cliente">
           <thead>
             <tr>
               <th>#</th>
@@ -50,8 +50,8 @@ class Clientes extends Component {
           <tbody>
             {this.state.loading ? <tr><td colSpan="5" className="carregando">Carregando...</td></tr> : clientes}
           </tbody>
-        </Table>
-      </Container>
+        </table>
+      </div>
     )
 
   }

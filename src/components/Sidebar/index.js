@@ -1,76 +1,92 @@
-import React from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHome, faBriefcase, faPaperPlane, faQuestion, faImage, faCopy } from '@fortawesome/free-solid-svg-icons';
-import Submenu from './Submenu';
-import { NavItem, NavLink, Nav } from 'reactstrap';
-import classNames from 'classnames';
-// import {Link} from 'react-router-dom';
+import React from 'react'
 
-const SideBar = props => (
-    <div className={classNames('sidebar', {'is-open': props.isOpen})}>
-      <div className="sidebar-header">
-        <span color="info" onClick={props.toggle} style={{color: '#fff'}}>&times;</span>
-        <h3>Graciela Leonardi</h3>
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUtensils } from '@fortawesome/free-solid-svg-icons'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './Sidebar.scss'
+
+const Sidebar = () => {
+  return (
+    <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div className="sidebar-brand-icon rotate-n-15">
+          {/* <i icon={"faUtensils"}></i> */}
+          <FontAwesomeIcon icon={faUtensils} size="2x" />
+        </div>
+        <div className="sidebar-brand-text mx-3">Graciela Leonardi</div>
+      </a>
+
+      <hr className="sidebar-divider my-0" />
+
+      <li className="nav-item active">
+        <a className="nav-link" href="index.html">
+          <i className="fas fa-fw fa-home"></i>
+          <span>Página inicial</span></a>
+      </li>
+
+      <hr className="sidebar-divider" />
+
+      <div className="sidebar-heading">
+        Interface
       </div>
-      <div className="side-menu">
-        <Nav vertical className="list-unstyled pb-3">
-          {/* <Submenu title="Home" items={submenus[0]}/> */}
-          <NavItem>
-            <NavLink href="/">
-              {/* <FontAwesomeIcon icon={faBriefcase} className="mr-2"/>About */}Página Inicial
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/clientes">
-              {/* <FontAwesomeIcon icon={faImage} className="mr-2"/>Portfolio */}Clientes
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/produtos">
-              {/* <FontAwesomeIcon icon={faQuestion} className="mr-2"/>FAQ */}Produtos
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#" to={'/contact'}>
-              {/* <FontAwesomeIcon icon={faPaperPlane} className="mr-2"/>Contact */}Contact
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/login">
-              {/* <FontAwesomeIcon icon={faPaperPlane} className="mr-2"/>Contact */}Sair
-            </NavLink>
-          </NavItem>
-        </Nav>        
+
+      <li className="nav-item">
+        <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i className="fas fa-fw fa-cog"></i>
+          <span>Configurações</span>
+        </a>
+        <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div className="bg-white py-2 collapse-inner rounded">
+            <h6 className="collapse-header">Componentes disponíveis:</h6>
+            <a className="collapse-item" href="#">Buttons</a>
+            <a className="collapse-item" href="#">Cards</a>
+          </div>
+        </div>
+      </li>
+
+      <li className="nav-item">
+        <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i className="fas fa-fw fa-wrench"></i>
+          <span>Ajustes</span>
+        </a>
+        <div id="collapseUtilities" className="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div className="bg-white py-2 collapse-inner rounded">            
+            <a className="collapse-item" href="#">Cores</a>
+            <a className="collapse-item" href="#">Bordas</a>
+            <a className="collapse-item" href="#">Animações</a>
+            <a className="collapse-item" href="#">Outros</a>
+          </div>
+        </div>
+      </li>
+
+      <li className="nav-item">
+        <a className="nav-link" href="blank.html">
+          <i className="fas fa-fw fa-file-alt"></i>
+          <span>Pedidos</span></a>
+      </li>
+      
+      <li className="nav-item">
+        <a className="nav-link" href="#">
+          <i className="fas fa-fw fa-chart-area"></i>
+          <span>Cardápio</span></a>
+      </li>
+
+      <li className="nav-item">
+        <a className="nav-link" href="clientes.html">
+          <i className="fas fa-fw fa-table"></i>
+          <span>Clientes</span></a>
+      </li>
+
+      <hr className="sidebar-divider d-none d-md-block" />
+
+      <div className="text-center d-none d-md-inline">
+        <button className="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
-    </div>
-  );
 
-  const submenus = [
-    [
-      {
-        title: "Home 1",
-        target: "Home-1"
-      },
-      {
-        title: "Home 2",
-        target: "Home-2",        
-      },
-      {
-        itle: "Home 3",
-        target: "Home-3",      
-      }
-    ],
-    [
-      {
-        title: "Page 1",
-        target: "Page-1",          
-      },
-      {
-        title: "Page 2",
-        target: "Page-2",        
-      }
-    ]
-  ]
-  
+    </ul>
+  )
+}
 
-export default SideBar;
+export default Sidebar
