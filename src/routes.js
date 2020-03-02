@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, BrowserRouter, Switch} from 'react-router-dom'
+import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 
 // import Home from './components/Home'
 import Clientes from './components/Clientes'
@@ -8,12 +8,13 @@ import ShowCliente from './components/Clientes/ShowCliente'
 import FormAlterarCliente from './components/Clientes/FormAlterarCliente'
 // import Cardapios from './components/Cardapios'
 import Login from './components/Login'
+import Header from './components/Header'
 
 
 const Routes = () => (
-  // <BrowserRouter>
+  <Router>
     <Switch>
-      {/* <Route exact path="/" component={Home} /> */}
+      <Route exact path="/" component={Header} />
       <Route exact path="/clientes" component={Clientes} />
       <Route path="/clientes/new" component={FormCliente} />
       <Route path="/cliente/:login" component={ShowCliente} />
@@ -21,7 +22,7 @@ const Routes = () => (
       {/* <Route path="/cardapios" component={Cardapios} /> */}
       <Route path="/login" component={Login} />
     </Switch>
-  // </BrowserRouter>
+   </Router>
 )
 
 export default Routes

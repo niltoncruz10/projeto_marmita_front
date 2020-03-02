@@ -1,7 +1,9 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUtensils } from '@fortawesome/free-solid-svg-icons'
+import { faUtensils, faUsers, faHome } from '@fortawesome/free-solid-svg-icons'
+
+import {BrowserRouter as Router} from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Sidebar.scss'
@@ -10,10 +12,9 @@ const Sidebar = () => {
   return (
     <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-      <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div className="sidebar-brand-icon rotate-n-15">
-          {/* <i icon={"faUtensils"}></i> */}
-          <FontAwesomeIcon icon={faUtensils} size="2x" />
+      <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+        <div className="sidebar-brand-icon ">
+          <FontAwesomeIcon icon={faUtensils} size="2x" transform={{rotate: -15}} />
         </div>
         <div className="sidebar-brand-text mx-3">Graciela Leonardi</div>
       </a>
@@ -21,16 +22,22 @@ const Sidebar = () => {
       <hr className="sidebar-divider my-0" />
 
       <li className="nav-item active">
-        <a className="nav-link" href="index.html">
-          <i className="fas fa-fw fa-home"></i>
-          <span>Página inicial</span></a>
+        <a className="nav-link" href="/">
+          {/* <i className="fas fa-fw fa-home"></i> */}
+          <FontAwesomeIcon icon={faHome} />
+          <span className="ml-2">Página inicial</span></a>
       </li>
 
       <hr className="sidebar-divider" />
-
-      <div className="sidebar-heading">
-        Interface
-      </div>
+      
+      <li className="nav-item">
+        {/* <Router> */}
+          <Link className="nav-link" to="/clientes">
+            <FontAwesomeIcon icon={faUsers} />
+            <span className="ml-2">Clientes</span>
+          </Link>
+        {/* </Router> */}
+      </li>
 
       <li className="nav-item">
         <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -73,11 +80,6 @@ const Sidebar = () => {
           <span>Cardápio</span></a>
       </li>
 
-      <li className="nav-item">
-        <a className="nav-link" href="clientes.html">
-          <i className="fas fa-fw fa-table"></i>
-          <span>Clientes</span></a>
-      </li>
 
       <hr className="sidebar-divider d-none d-md-block" />
 
