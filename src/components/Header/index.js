@@ -7,7 +7,7 @@ import Footer from '../Footer'
 
 const Header = () => {
   return(    
-    <div id="wrapper">
+    <React.Fragment>
     <Sidebar />
     
     <div id="content-wrapper" className="d-flex flex-column">
@@ -246,7 +246,7 @@ const Header = () => {
         </div>
       <Footer />
       </div>
-    </div>
+    </React.Fragment>
   )
 }
 

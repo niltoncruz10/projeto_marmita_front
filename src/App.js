@@ -8,7 +8,7 @@ import './style.css'
 const App = () => {
 
   return (
-    <div className="wrapper">
+    <div id="wrapper">
         <Routes />
     </div>
   );
