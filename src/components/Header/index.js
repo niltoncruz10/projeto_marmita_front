@@ -244,8 +244,8 @@ const Header = () => {
           </div>
 
         </div>
+      <Footer />
       </div>
-      {/* <Footer /> */}
     </div>
   )
 }

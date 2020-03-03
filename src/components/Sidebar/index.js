@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUtensils, faUsers, faHome } from '@fortawesome/free-solid-svg-icons'
 
-import {BrowserRouter as Router} from 'react-router-dom'
-
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Sidebar.scss'
 
@@ -23,7 +21,6 @@ const Sidebar = () => {
 
       <li className="nav-item active">
         <a className="nav-link" href="/">
-          {/* <i className="fas fa-fw fa-home"></i> */}
           <FontAwesomeIcon icon={faHome} />
           <span className="ml-2">Página inicial</span></a>
       </li>
@@ -31,12 +28,10 @@ const Sidebar = () => {
       <hr className="sidebar-divider" />
       
       <li className="nav-item">
-        {/* <Router> */}
           <Link className="nav-link" to="/clientes">
             <FontAwesomeIcon icon={faUsers} />
             <span className="ml-2">Clientes</span>
           </Link>
-        {/* </Router> */}
       </li>
 
       <li className="nav-item">
