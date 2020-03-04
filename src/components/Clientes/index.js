@@ -39,22 +39,34 @@ const Clientes = () => {
       <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
           <div className="container-fluid">
-            <a href="/clientes/new" className="btn btn-primary">Cadastrar cliente</a>
-            <table striped bordered className="table-cliente">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Nome</th>
-                  <th>Data de pagamento</th>
-                  <th>Saldo</th>
-                  <th>Ações</th>
+            <h1 className="h3 mb-2 text-gray-800">Clientes</h1>
+            <div className="card shadow mb-4">
+              <div className="card-header py-3">  
+                <div className="row justify-content-end">
+                  <a href="/clientes/new" className="btn btn-primary">Cadastrar cliente</a>                
+                </div>            
+              </div>
+              <div className="card-body">
+                <div className="table-responsive">
+                  <table className="table-cliente table table-bordered dataTable">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Data de pagamento</th>
+                        <th>Saldo</th>
+                        <th>Ações</th>
 
-                </tr>
-              </thead>
-              <tbody>
-                {loading ? <tr><td colSpan="5" className="carregando">Carregando...</td></tr> : listaClientes}
-              </tbody>
-            </table>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {loading ? <tr><td colSpan="5" className="carregando">Carregando...</td></tr> : listaClientes}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
         <Footer />
