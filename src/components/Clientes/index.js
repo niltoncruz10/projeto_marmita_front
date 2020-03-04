@@ -4,6 +4,7 @@ import axios from 'axios'
 import Cliente from './Cliente'
 import Sidebar from '../Sidebar'
 import Footer from '../Footer'
+import FormCliente from './FormCliente'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css'
@@ -11,6 +12,10 @@ import './style.css'
 const Clientes = () => {
   const [loading, setLoading] = useState(false)
   const [clientes, setClientes] = useState([])
+  const [show, setShow] = useState(false)
+
+  const handleShow = () => setShow(true)
+  const handleClose = () => setShow(false)
 
   const generatedDataTable = (dados) => {    
     let dadosClientes = []
@@ -43,7 +48,7 @@ const Clientes = () => {
             <div className="card shadow mb-4">
               <div className="card-header py-3">  
                 <div className="row justify-content-end">
-                  <a href="/clientes/new" className="btn btn-primary">Cadastrar cliente</a>                
+                  <a href="#" className="btn btn-primary" onClick={handleShow}>Cadastrar cliente</a>                
                 </div>            
               </div>
               <div className="card-body">
@@ -56,7 +61,6 @@ const Clientes = () => {
                         <th>Data de pagamento</th>
                         <th>Saldo</th>
                         <th>Ações</th>
-
                       </tr>
                     </thead>
                     <tbody>
@@ -71,6 +75,10 @@ const Clientes = () => {
         </div>
         <Footer />
       </div>
+
+      {/* Modal */}
+      <FormCliente show={show} close={handleClose} />
+
     </>
   )
   
